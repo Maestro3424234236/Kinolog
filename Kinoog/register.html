@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO -->
+  <title>Регистрация в кинологическом клубе | Создайте профиль питомца</title>
+  <meta name="description" content="Регистрация в кинологическом клубе. Создайте цифровой профиль собаки, получайте напоминания и записывайтесь на занятия.">
+  
+  <!-- Шрифты -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Иконки -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Навигация -->
+  <nav class="nav">
+    <div class="container nav__container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-paw logo__icon"></i>
+        <span class="logo__text">kinolog<span class="logo__dot">.</span></span>
+      </a>
+      
+      <div class="nav__links">
+        <a href="index.html" class="nav__link">Главная</a>
+        <a href="#" class="nav__link">Расписание</a>
+        <a href="#" class="nav__link">Консультации</a>
+        <a href="#" class="nav__link">Маркетплейс</a>
+        <a href="#" class="nav__link nav__link--premium">Премиум</a>
+      </div>
+      
+      <div class="nav__buttons">
+        <a href="register.html" class="btn btn--outline">Вход</a>
+        <a href="register.html" class="btn btn--primary">Регистрация</a>
+      </div>
+      
+      <button class="nav__mobile-toggle" id="mobileToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <!-- Заголовок страницы -->
+      <div class="page-header">
+        <h1 class="page-header__title">Присоединяйтесь к клубу</h1>
+        <p class="page-header__subtitle">Создайте профиль и начните пользоваться всеми возможностями</p>
+      </div>
+
+      <!-- Выбор тарифа -->
+      <div class="plan-selector">
+        <div class="plan-selector__tabs">
+          <button class="plan-selector__tab plan-selector__tab--active" data-plan="free">Бесплатный</button>
+          <button class="plan-selector__tab" data-plan="premium">Премиум</button>
+          <button class="plan-selector__tab" data-plan="breeder">Для заводчиков</button>
+        </div>
+      </div>
+
+      <!-- Основной контент: форма + преимущества -->
+      <div class="register-grid">
+        <!-- Левая колонка: форма -->
+        <div class="register-form">
+          <h2 class="register-form__title">Создать аккаунт</h2>
+          
+          <div class="register-form__social">
+            <a href="#" class="social-btn social-btn--vk">
+              <i class="fab fa-vk"></i>
+              <span>ВКонтакте</span>
+            </a>
+            <a href="#" class="social-btn social-btn--google">
+              <i class="fab fa-google"></i>
+              <span>Google</span>
+            </a>
+          </div>
+          
+          <div class="register-form__divider">
+            <span>или email</span>
+          </div>
+          
+          <form id="registerForm" class="form">
+            <div class="form__group">
+              <label class="form__label">Имя</label>
+              <input type="text" class="form__input" placeholder="Александра">
+            </div>
+            
+            <div class="form__group">
+              <label class="form__label">Email</label>
+              <input type="email" class="form__input" placeholder="example@mail.ru">
+            </div>
+            
+            <div class="form__group">
+              <label class="form__label">Телефон</label>
+              <input type="tel" class="form__input" placeholder="+7 (999) 123-45-67">
+            </div>
+            
+            <div class="form__group">
+              <label class="form__label">Пароль</label>
+              <input type="password" class="form__input" placeholder="Придумайте пароль">
+            </div>
+            
+            <div class="form__group form__group--checkbox">
+              <input type="checkbox" id="agree" checked>
+              <label for="agree">
+                Согласен с <a href="#">условиями обработки данных</a>
+              </label>
+            </div>
+            
+            <button type="submit" class="btn btn--primary form__submit">
+              Зарегистрироваться
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </form>
+          
+          <p class="register-form__login-link">
+            Уже есть аккаунт? <a href="#">Войти</a>
+          </p>
+        </div>
+        
+        <!-- Правая колонка: преимущества тарифов -->
+        <div class="register-benefits">
+          <!-- Бесплатный план -->
+          <div class="benefits-plan benefits-plan--active" id="freePlan">
+            <div class="benefits-plan__header">
+              <h3>Бесплатный аккаунт</h3>
+              <div class="benefits-plan__price">0 ₽</div>
+            </div>
+            <ul class="benefits-plan__list">
+              <li><i class="fas fa-check"></i> Профиль собаки (1 питомец)</li>
+              <li><i class="fas fa-check"></i> Просмотр расписания</li>
+              <li><i class="fas fa-check"></i> Запись на мероприятия</li>
+              <li><i class="fas fa-check"></i> Базовая медкарта</li>
+              <li><i class="fas fa-check"></i> 10 фото в альбоме</li>
+            </ul>
+          </div>
+          
+          <!-- Премиум план -->
+          <div class="benefits-plan" id="premiumPlan">
+            <div class="benefits-plan__header">
+              <h3>Премиум</h3>
+              <div class="benefits-plan__price">599 ₽ <span>/мес</span></div>
+            </div>
+            <ul class="benefits-plan__list">
+              <li><i class="fas fa-crown"></i> До 5 питомцев</li>
+              <li><i class="fas fa-crown"></i> Безлимитные фото/видео</li>
+              <li><i class="fas fa-crown"></i> Напоминания о прививках</li>
+              <li><i class="fas fa-crown"></i> Расширенная статистика</li>
+              <li><i class="fas fa-crown"></i> Скидка 10% на услуги</li>
+              <li><i class="fas fa-crown"></i> Приоритетная запись</li>
+            </ul>
+            <div class="benefits-plan__hint">Год — 4 990 ₽ (экономия 30%)</div>
+          </div>
+          
+          <!-- Для заводчиков -->
+          <div class="benefits-plan" id="breederPlan">
+            <div class="benefits-plan__header">
+              <h3>Для заводчиков</h3>
+              <div class="benefits-plan__price">1 290 ₽ <span>/мес</span></div>
+            </div>
+            <ul class="benefits-plan__list">
+              <li><i class="fas fa-star"></i> Всё из Премиум</li>
+              <li><i class="fas fa-star"></i> Ведение родословных</li>
+              <li><i class="fas fa-star"></i> Учет пометов</li>
+              <li><i class="fas fa-star"></i> Метрики PDF</li>
+              <li><i class="fas fa-star"></i> Продвижение в каталоге</li>
+            </ul>
+            <div class="benefits-plan__hint">Первые 14 дней бесплатно</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Дополнительные преимущества -->
+      <div class="trust-badges">
+        <div class="trust-badge">
+          <i class="fas fa-shield-alt"></i>
+          <span>Безопасные платежи</span>
+        </div>
+        <div class="trust-badge">
+          <i class="fas fa-lock"></i>
+          <span>Защита данных</span>
+        </div>
+        <div class="trust-badge">
+          <i class="fas fa-headset"></i>
+          <span>Поддержка 24/7</span>
+        </div>
+        <div class="trust-badge">
+          <i class="fas fa-undo-alt"></i>
+          <span>Возврат 14 дней</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Подвал -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <div class="footer__logo">
+            <i class="fas fa-paw"></i>
+            <span>kinolog.</span>
+          </div>
+          <p class="footer__text">Современный кинологический клуб для владельцев собак</p>
+        </div>
+        
+        <div class="footer__col">
+          <h4>Навигация</h4>
+          <a href="#">Главная</a>
+          <a href="#">Расписание</a>
+          <a href="#">Консультации</a>
+          <a href="#">Маркетплейс</a>
+        </div>
+        
+        <div class="footer__col">
+          <h4>Информация</h4>
+          <a href="#">О нас</a>
+          <a href="#">Контакты</a>
+          <a href="#">Партнёрам</a>
+          <a href="#">Блог</a>
+        </div>
+        
+        <div class="footer__col">
+          <h4>Правовое</h4>
+          <a href="#">Пользовательское соглашение</a>
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Оплата и возврат</a>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <p>© 2026 Кинологический клуб kinolog. Все права защищены.</p>
+        <div class="footer__social">
+          <a href="#"><i class="fab fa-vk"></i></a>
+          <a href="#"><i class="fab fa-telegram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
